@@ -53,6 +53,10 @@ button {
     grid-column: span 2;
 }
 
+.newButtons{
+    background-color: #8a041b;
+}
+
 .operator {
     background-color: #FF8F1F;    
 }
