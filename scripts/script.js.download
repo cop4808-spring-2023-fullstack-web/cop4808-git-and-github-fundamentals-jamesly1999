@@ -29,8 +29,17 @@ function clickButton() {
                 updateDisplay();
             } else if(buttons[i].classList.contains('operator')) {
                 inputOperator(buttons[i].value);
-            }else if(buttons[i].classList.contains('newButtons')) {
-                pi(buttons[i].value, firstOperator);
+            }else if(buttons[i].classList.contains('squared')) {
+                squared(buttons[i].value);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('pi')) {
+                pi(buttons[i].value, firstOperand);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('squareRoot')) {
+                squareRoot(buttons[i].value);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('e')) {
+                e(buttons[i].value);
                 updateDisplay();
             }else if(buttons[i].classList.contains('equals')) {
                 inputEquals();
@@ -216,16 +225,14 @@ if(x != null){
 
 //The value of e is approx. 2.71828182. this value will be the base of the button e
 function e(x){
-    return Math.pow(2.71828182, x);
+    displayValue =  Math.pow(2.71828182, x).toString();
 }
 
 function squared(num){
-    if(num != null){
-        return Math.pow(num, 2);
-    }
+     displayValue = Math.pow(num, 2).toString();    
     
 }
 
 function squareRoot(num){
-    return Math.sqrt(num);
+    displayValue= Math.sqrt(num).toString();
 }
