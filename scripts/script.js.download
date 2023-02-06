@@ -191,6 +191,7 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
+/*
 //New functions
 function pi(x, op){
 if(x != null){
@@ -211,10 +212,11 @@ if(x != null){
         x = 3.1459 
     }
 }
+*/
 
 //The value of e is approx. 2.71828182. this value will be the base of the button e
 function e(x){
-    
+    return Math.pow(2.71828182, x);
 }
 
 function squared(num){
