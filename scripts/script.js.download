@@ -220,9 +220,12 @@ function e(x){
 }
 
 function squared(num){
-    return Math.pow(num, 2);
+    if(num != null){
+        return Math.pow(num, 2);
+    }
+    
 }
 
 function squareRoot(num){
-    return Math.squrt(num);
+    return Math.sqrt(num);
 }
