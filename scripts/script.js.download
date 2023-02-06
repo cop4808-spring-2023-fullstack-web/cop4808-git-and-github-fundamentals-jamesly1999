@@ -29,7 +29,10 @@ function clickButton() {
                 updateDisplay();
             } else if(buttons[i].classList.contains('operator')) {
                 inputOperator(buttons[i].value);
-            } else if(buttons[i].classList.contains('equals')) {
+            }else if(buttons[i].classList.contains('newButtons')) {
+                pi(buttons[i].value, firstOperator);
+                updateDisplay();
+            }else if(buttons[i].classList.contains('equals')) {
                 inputEquals();
                 updateDisplay();
             } else if(buttons[i].classList.contains('decimal')) {
@@ -48,6 +51,11 @@ function clickButton() {
     )}
 }
 
+/*else if(buttons[i].classList.contains('newButtons')) {
+                pi(buttons[i].value, firstOperator);
+                updateDisplay();
+            }
+*/
 clickButton();
 
 function inputOperand(operand) {
@@ -181,4 +189,38 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+
+//New functions
+function pi(x, op){
+if(x != null){
+    if(op === '+') {
+        return x + 3.1459;
+    }else if(op === '-') {
+        return x - 3.1459;
+    } else if(op === '*') {
+        return x * 3.1459;
+    } else if(op === '/') {
+        if(y === 0) {
+            return 'lmao';
+        } else {
+        return x / 3.1459;
+        }
+    }
+    else{
+        x = 3.1459 
+    }
+}
+
+//The value of e is approx. 2.71828182. this value will be the base of the button e
+function e(x){
+    
+}
+
+function squared(num){
+    return Math.pow(num, 2);
+}
+
+function squareRoot(num){
+    return Math.squrt(num);
 }
